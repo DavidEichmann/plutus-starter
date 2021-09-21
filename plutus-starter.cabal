@@ -24,7 +24,7 @@ maintainer:         Your email
 flag defer-plugin-errors
     description:
         Defer errors from the plugin, useful for things like Haddock that can't handle it.
-    default: False
+    default: True
     manual: True
 
 common lang
@@ -42,6 +42,7 @@ library
     import: lang
     exposed-modules:
       MyModule
+      Types
       Plutus.Contracts.Game
     build-depends:
       base >= 4.9 && < 5,
@@ -49,11 +50,14 @@ library
       bytestring,
       containers,
       freer-extras,
+      text,
+
       playground-common,
       plutus-contract,
       plutus-tx-plugin,
       plutus-tx,
-      plutus-ledger
+      plutus-ledger,
+      plutus-ledger-api
     hs-source-dirs: src examples/src
 
 test-suite plutus-example-projects-test

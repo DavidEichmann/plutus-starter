@@ -17,6 +17,10 @@
 {-# LANGUAGE TypeOperators              #-}
 {-# LANGUAGE ViewPatterns               #-}
 
+{-# OPTIONS_GHC -fno-ignore-interface-pragmas #-}
+{-# OPTIONS_GHC -fno-omit-interface-pragmas #-}
+{-# OPTIONS_GHC -fobject-code #-}
+{-# OPTIONS_GHC -O0 #-}
 
 -- | A guessing game
 module Plutus.Contracts.Game
